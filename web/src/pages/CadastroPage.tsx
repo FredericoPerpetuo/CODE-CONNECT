@@ -1,16 +1,20 @@
+import { useEffect } from 'react'
 import { AuthLayout } from '../templates/AuthLayout'
+import { RegisterForm } from '../components/organisms/RegisterForm'
 
 export function CadastroPage() {
+  useEffect(() => {
+    document.title = 'Cadastro — Code Connect'
+  }, [])
+
   return (
     <AuthLayout
       banner={{
-        src: '/banner-login.png',
-        alt: '',
+        src: '/banner-cadastro.png',
+        alt: 'Mulher sorrindo em frente a uma tela com arte digital verde',
       }}
     >
-      <div className="flex flex-col items-center justify-center flex-1 p-10">
-        <p className="text-text-muted">Em breve</p>
-      </div>
+      <RegisterForm />
     </AuthLayout>
   )
 }

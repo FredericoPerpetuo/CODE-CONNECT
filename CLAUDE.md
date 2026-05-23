@@ -95,6 +95,38 @@ web/src/
 - Never use inline `style` attributes for layout or theming — use Tailwind classes.
 - Atoms must be generic and reusable with no business logic. Business logic belongs in organisms or pages.
 
+#### Colors
+
+All colors are defined as CSS custom properties in `web/src/index.css` under `@theme` and map directly to Tailwind utility classes (e.g. `bg-brand`, `text-text-muted`).
+
+| Token | Hex | Figma name | Usage |
+|---|---|---|---|
+| `brand` | `#81FE88` | Verde destaque | Primary CTA background |
+| `brand-strong` | `#6AE870` | — | Hover state of `brand` |
+| `brand-ink` | `#00090E` | Grafite | Text on `brand` background |
+| `surface-base` | `#00090E` | Grafite | Page background |
+| `surface-card` | `#171D1F` | Cinza Escuro | Card / panel background |
+| `surface-input` | `#132E35` | Verde Petróleo | Input background |
+| `border-subtle` | `#1C3840` | — | Borders and dividers |
+| `text-primary` | `#E1E1E1` | Offwhite | Body text |
+| `text-muted` | `#888888` | Cinza médio | Secondary / placeholder text |
+
+**Rules:**
+- Never use raw hex values in component class names (no `bg-[#81FE88]`). Always reference a theme token.
+- To add a new color, define it in `@theme` first, then use it via its generated class.
+
+#### Font sizes
+
+Use the nearest standard Tailwind size token. Never use arbitrary sizes (no `text-[15px]`).
+
+| Figma token | Size | Tailwind token |
+|---|---|---|
+| Subtitle Large Semibold | 31 px | `text-3xl` (30 px) |
+| Paragraph Large | 22 px | `text-2xl` (24 px) |
+| Paragraph / Paragraph Semibold | 18 px | `text-lg` (18 px) |
+| Paragraph Small | 15 px | `text-sm` (14 px) |
+| Label | 12.5 px | `text-xs` (12 px) |
+
 ## Tooling Notes
 
 - Package manager: **pnpm** (workspaces). Do not use npm or yarn.

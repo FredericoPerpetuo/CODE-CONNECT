@@ -14,7 +14,7 @@ export function Checkbox({ id, label, ...props }: CheckboxProps) {
         className="w-4 h-4 rounded accent-brand cursor-pointer"
         {...props}
       />
-      <label htmlFor={id} className="text-sm text-text-muted cursor-pointer select-none">
+      <label htmlFor={id} className="text-xs text-text-muted cursor-pointer select-none">
         {label}
       </label>
     </div>
