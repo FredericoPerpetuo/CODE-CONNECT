@@ -8,7 +8,7 @@ export function Label({ htmlFor, children, className = '', ...props }: LabelProp
   return (
     <label
       htmlFor={htmlFor}
-      className={`block text-sm font-medium text-text-muted mb-1 ${className}`}
+      className={`block text-xs font-medium text-text-muted mb-1 ${className}`}
       {...props}
     >
       {children}
