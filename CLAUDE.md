@@ -109,7 +109,7 @@ All colors are defined as CSS custom properties in `web/src/index.css` under `@t
 | `surface-input` | `#132E35` | Verde Petróleo | Input background |
 | `border-subtle` | `#1C3840` | — | Borders and dividers |
 | `text-primary` | `#E1E1E1` | Offwhite | Body text |
-| `text-muted` | `#888888` | Cinza médio | Secondary / placeholder text |
+| `text-muted` | `#B5B5B5` | Cinza médio | Secondary / placeholder text |
 
 **Rules:**
 - Never use raw hex values in component class names (no `bg-[#81FE88]`). Always reference a theme token.
