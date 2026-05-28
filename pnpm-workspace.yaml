@@ -3,4 +3,6 @@ packages:
   - 'api'
 allowBuilds:
   '@nestjs/core': true
+  '@scarf/scarf': set this to true or false
+  bcrypt: set this to true or false
   unrs-resolver: true
